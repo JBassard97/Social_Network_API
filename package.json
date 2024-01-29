@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node ./seeds/index.js"
+  },
+  "name": "social_network_api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
