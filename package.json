@@ -5,7 +5,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node ./utils/seed.js"
+    "seedUsers": "node ./utils/seedUsers.js",
+    "seedThoughts": "node ./utils/seedThoughts.js"
   },
   "name": "social_network_api",
   "version": "1.0.0",
