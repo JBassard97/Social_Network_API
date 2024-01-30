@@ -8,6 +8,7 @@ const reactionSchema = new Schema({
   reactionBody: {
     type: String,
     required: true,
+    minlength: 1,
     maxlength: 280,
   },
   username: {
@@ -36,10 +37,9 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      // ! Getter method to format the timestamp on query
-      get: function (createdAt) {
-        // TODO: Adjust formatting as needed
-        return new Date(createdAt).toLocaleString();
+      get: function () {
+        // ! Getter method to format the timestamp on query
+        return new Date().toLocaleString(); // You can adjust the formatting as needed
       },
     },
     username: {
