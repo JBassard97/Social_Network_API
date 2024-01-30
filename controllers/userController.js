@@ -20,7 +20,7 @@ module.exports = {
         return res.status(404).json({ error: "User not found with that ID" });
       }
 
-      res.json(user);
+      return res.status(200).json(user);
     } catch (error) {
       return res.status(500).json(error);
     }
@@ -28,7 +28,7 @@ module.exports = {
   async createNewUser(req, res) {
     try {
       const dbUserData = await User.create(req.body);
-      res.json(dbUserData);
+      res.status(200).json(dbUserData);
     } catch (error) {
       return res.status(500).json(error);
     }
@@ -41,7 +41,7 @@ module.exports = {
         { new: true, runValidators: true }
       );
       if (!updatedUser) {
-        throw new Error("User not found with that ID");
+        return res.status(404).json({ error: "User not found with that ID" });
       }
       return res.status(200).json(updatedUser);
     } catch (error) {

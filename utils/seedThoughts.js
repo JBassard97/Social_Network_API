@@ -1,8 +1,9 @@
 const connection = require("../config/connection");
 const { Thought } = require("../models");
 const thoughtData = require("./data/thoughtData");
+const fancyLog = require("./imports");
 
-console.time("Seed Speed");
+console.time(fancyLog("Seed Speed"));
 
 connection.once("open", async () => {
   try {
@@ -14,6 +15,6 @@ connection.once("open", async () => {
     console.error(error);
   } finally {
     connection.close();
-    console.timeEnd("Seed Speed");
+    console.timeEnd(fancyLog("Seed Speed"));
   }
-})
+});
