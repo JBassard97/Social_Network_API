@@ -1,4 +1,5 @@
 const Thought = require("../models/Thought");
+const User = require("../models/User");
 
 module.exports = {
   async getAllThoughts(req, res) {
@@ -30,6 +31,18 @@ module.exports = {
   async createNewThought(req, res) {
     try {
       const newThought = await Thought.create(req.body);
+
+      const user = await User.findOneAndUpdate(
+        { username: req.body.username },
+        { $push: { thoughts: newThought._id } },
+        { new: true }
+      );
+
+      if (!user) {
+        return res
+          .status(404)
+          .json({ error: "User not found with that username" });
+      }
 
       return res.status(200).json(newThought);
     } catch (error) {
@@ -77,7 +90,7 @@ module.exports = {
     try {
       const thoughtId = req.params.thoughtId;
       const thought = await Thought.findById(thoughtId);
-      
+
       if (!thought) {
         return res
           .status(404)
@@ -113,11 +126,9 @@ module.exports = {
       );
 
       if (reactionIndex === -1) {
-        return res
-          .status(400)
-          .json({
-            error: "Reaction not found in the thought's reactions list",
-          });
+        return res.status(400).json({
+          error: "Reaction not found in the thought's reactions list",
+        });
       }
 
       // Remove reactionId from the thought's reactions array

@@ -13,6 +13,7 @@ const reactionSchema = new Schema({
   username: {
     type: String,
     required: true,
+    ref: "users",
   },
   createdAt: {
     type: Date,
@@ -44,11 +45,12 @@ const thoughtSchema = new Schema(
     username: {
       type: String,
       required: true,
+      ref: "user", // Referencing 'User' model
     },
     reactions: [reactionSchema],
   },
   {
-    toJson: {
+    toJSON: {
       virtuals: true,
     },
   }
