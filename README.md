@@ -6,7 +6,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
+- [Demonstrations](#demonstrations)
 
 ## Description
 
@@ -29,10 +29,6 @@ You will need to have MongoDB and the MongoDB Compass installed to navigate the 
 Link to project: https://github.com/JBassard97/Social_Network_API
 
 Once you've followed the steps in 'Installation' and entered `npm run start`, a listening message will show in the terminal and you're set to begin testing it in a tool like Insomnia, Postman, or directly in the browser. For my demonstrations I'll be using Insomnia to manage collections of requests. When you are finished running the server, be sure to enter 'Ctrl + C'. Here is a brief layout of the routes and what the API expects and returns (all in JSON):
-
-
-
-Here is a brief layout of the routes and what the API expects and returns (all in JSON):
 
 ## User Routes
 
@@ -106,6 +102,9 @@ Here is a brief layout of the routes and what the API expects and returns (all i
 
 ## Demonstrations
 
+### Server Setup
+[Social_Network_Api Server Setup Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/9a205b48-ba9b-45f8-8a8b-804151e70707)
+
 ### User Routes
 [Social_Network_Api User Routes Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/96c52d23-69ba-4a9d-942c-a236a943e727)
 
@@ -117,6 +116,9 @@ Here is a brief layout of the routes and what the API expects and returns (all i
 
 ### Reaction Routes
 [Social_Network_Api Reaction Routes Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/05e5f7d3-9ba7-489d-8744-b38c885f31b7)
+
+## BONUS (Thoughts Deleted along with thier User)
+[Social_Network_Api Deleting Thoughts with their Users.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/8164a078-0ad7-448c-a67b-cd538bff937f)
 
 
 
