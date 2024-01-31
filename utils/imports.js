@@ -11,4 +11,12 @@ const fancyLog = (text) => {
   return output;
 };
 
-module.exports = fancyLog;
+const { addHours } = require("date-fns");
+
+const getCurrentDateTime = () => {
+  const currentDateTime = new Date();
+  const formattedDateTime = addHours(currentDateTime, -5);
+  return formattedDateTime;
+};
+
+module.exports = { fancyLog, getCurrentDateTime };

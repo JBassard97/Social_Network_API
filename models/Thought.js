@@ -1,4 +1,6 @@
 const { Schema, model, Types } = require("mongoose");
+const { getCurrentDateTime } = require("../utils/imports");
+const { format } = require("date-fns");
 
 const reactionSchema = new Schema({
   reactionId: {
@@ -18,11 +20,7 @@ const reactionSchema = new Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now,
-    get: function (createdAt) {
-      // ! Getter method to format the timestamp on query
-      return new Date(createdAt).toLocaleString(); // You can adjust the formatting as needed
-    },
+    default: getCurrentDateTime,
   },
 });
 
@@ -36,11 +34,7 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now,
-      get: function () {
-        // ! Getter method to format the timestamp on query
-        return new Date().toLocaleString(); // You can adjust the formatting as needed
-      },
+      default: getCurrentDateTime,
     },
     username: {
       type: String,
@@ -55,6 +49,10 @@ const thoughtSchema = new Schema(
     },
   }
 );
+
+thoughtSchema.virtual("formattedCreatedAt").get(function () {
+  return format(this.createdAt, "yyyy-MM-dd hh:mm:ss a");
+});
 
 thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
