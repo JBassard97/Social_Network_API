@@ -1,7 +1,7 @@
 const connection = require("../config/connection");
 const { Thought } = require("../models");
 const thoughtData = require("./data/thoughtData");
-const fancyLog = require("./imports");
+const { fancyLog } = require("./imports");
 
 console.time(fancyLog("Seed Speed"));
 
