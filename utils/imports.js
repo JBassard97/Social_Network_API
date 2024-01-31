@@ -15,7 +15,7 @@ const { addHours } = require("date-fns");
 
 const getCurrentDateTime = () => {
   const currentDateTime = new Date();
-  const formattedDateTime = addHours(currentDateTime, -5);
+  const formattedDateTime = addHours(currentDateTime, 0);
   return formattedDateTime;
 };
 
