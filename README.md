@@ -117,6 +117,9 @@ Once you've followed the steps in 'Installation' and entered `npm run start`, a 
 ### Reaction Routes
 [Social_Network_Api Reaction Routes Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/05e5f7d3-9ba7-489d-8744-b38c885f31b7)
 
+## BONUS (Thoughts Deleted along with thier User)
+[Social_Network_Api Deleting Thoughts with their Users.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/8164a078-0ad7-448c-a67b-cd538bff937f)
+
 
 
 
