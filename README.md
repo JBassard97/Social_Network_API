@@ -6,7 +6,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
+- [Demonstrations](#semonstrations)
 
 ## Description
 
@@ -29,10 +29,6 @@ You will need to have MongoDB and the MongoDB Compass installed to navigate the 
 Link to project: https://github.com/JBassard97/Social_Network_API
 
 Once you've followed the steps in 'Installation' and entered `npm run start`, a listening message will show in the terminal and you're set to begin testing it in a tool like Insomnia, Postman, or directly in the browser. For my demonstrations I'll be using Insomnia to manage collections of requests. When you are finished running the server, be sure to enter 'Ctrl + C'. Here is a brief layout of the routes and what the API expects and returns (all in JSON):
-
-
-
-Here is a brief layout of the routes and what the API expects and returns (all in JSON):
 
 ## User Routes
 
