@@ -106,6 +106,9 @@ Here is a brief layout of the routes and what the API expects and returns (all i
 
 ## Demonstrations
 
+### Server Setup
+[Social_Network_Api Server Setup Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/9a205b48-ba9b-45f8-8a8b-804151e70707)
+
 ### User Routes
 [Social_Network_Api User Routes Demonstration.webm](https://github.com/JBassard97/Social_Network_API/assets/142551579/96c52d23-69ba-4a9d-942c-a236a943e727)
 
