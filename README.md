@@ -6,7 +6,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Demonstrations](#semonstrations)
+- [Demonstrations](#demonstrations)
 
 ## Description
 
